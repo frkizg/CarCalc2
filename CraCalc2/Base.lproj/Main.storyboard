@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F31a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VAr-6y-lRB">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Car unit calculator-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CraCalc2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,121 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ki-eT-nFS">
+                                <rect key="frame" x="223.5" y="79" width="153" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Speed units">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="JFd-CA-BwW" kind="show" id="oPM-4q-2Gh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7i-ZX-6le">
+                                <rect key="frame" x="186" y="134" width="229" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Fuel consumption">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="9dV-qx-5vP" kind="show" id="mc5-Sp-UhN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bhk-Et-1ZZ">
+                                <rect key="frame" x="260" y="189" width="81" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Power">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Azy-N0-Vgg">
+                                <rect key="frame" x="256" y="244" width="89" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Torque">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="o7i-ZX-6le" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3mb-et-4gG"/>
+                            <constraint firstItem="9ki-eT-nFS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="8Kj-L5-iGi"/>
+                            <constraint firstItem="Bhk-Et-1ZZ" firstAttribute="top" secondItem="o7i-ZX-6le" secondAttribute="bottom" constant="8" id="I8d-bo-rDZ"/>
+                            <constraint firstItem="9ki-eT-nFS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SuW-dD-VjX"/>
+                            <constraint firstItem="Azy-N0-Vgg" firstAttribute="top" secondItem="Bhk-Et-1ZZ" secondAttribute="bottom" constant="8" id="al7-Iz-2fs"/>
+                            <constraint firstItem="o7i-ZX-6le" firstAttribute="top" secondItem="9ki-eT-nFS" secondAttribute="bottom" constant="8" id="bRt-L5-UJo"/>
+                            <constraint firstItem="Azy-N0-Vgg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mpV-qm-82s"/>
+                            <constraint firstItem="Bhk-Et-1ZZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zWw-Ib-z6E"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Car unit calculator" id="Ig0-Ko-FMa">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="JPX-DL-bOY"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1117" y="429"/>
+        </scene>
+        <!--Speed units-->
+        <scene sceneID="Iho-gi-4UQ">
+            <objects>
+                <viewController modalTransitionStyle="flipHorizontal" id="JFd-CA-BwW" customClass="ViewController" customModule="CraCalc2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="w15-nH-P5Q"/>
+                        <viewControllerLayoutGuide type="bottom" id="91U-n4-EYP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="64Q-pG-Baq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Speed units" id="J0t-bI-IJ8">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="f9e-ky-Phh"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P7i-kK-QL5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1761" y="429"/>
+        </scene>
+        <!--Fuel consumption-->
+        <scene sceneID="qCs-kB-dop">
+            <objects>
+                <viewController modalTransitionStyle="flipHorizontal" id="9dV-qx-5vP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oPS-DV-uao"/>
+                        <viewControllerLayoutGuide type="bottom" id="3fj-0M-Qay"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="odT-vN-Z6m">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Fuel consumption" id="q4e-vu-O34"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x8e-tw-JPd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1761" y="1211"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AsZ-ah-zQT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VAr-6y-lRB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="G27-zl-z2i">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="n3B-uq-3rK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ECP-Tk-7mc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="429"/>
         </scene>
     </scenes>
 </document>

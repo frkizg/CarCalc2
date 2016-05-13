@@ -43,6 +43,9 @@
                                 <state key="normal" title="Power">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="NhB-f3-Z1R" kind="show" id="PPM-0U-Luq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Azy-N0-Vgg">
                                 <rect key="frame" x="256" y="244" width="89" height="47"/>
@@ -50,6 +53,9 @@
                                 <state key="normal" title="Torque">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="uWe-hg-nRJ" kind="show" id="otb-dK-MML"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -72,6 +78,25 @@
             </objects>
             <point key="canvasLocation" x="1117" y="429"/>
         </scene>
+        <!--Power units-->
+        <scene sceneID="AEd-vc-DHk">
+            <objects>
+                <viewController id="NhB-f3-Z1R" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nQe-rz-JUS"/>
+                        <viewControllerLayoutGuide type="bottom" id="LbM-PQ-JNc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cuV-EU-hVf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Power units" id="bWI-tu-xqT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PUw-Ta-NU9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1849" y="1238"/>
+        </scene>
         <!--Speed units-->
         <scene sceneID="Iho-gi-4UQ">
             <objects>
@@ -91,7 +116,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P7i-kK-QL5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1761" y="429"/>
+            <point key="canvasLocation" x="1849" y="-291"/>
         </scene>
         <!--Fuel consumption-->
         <scene sceneID="qCs-kB-dop">
@@ -110,7 +135,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x8e-tw-JPd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1761" y="1211"/>
+            <point key="canvasLocation" x="1849" y="459"/>
+        </scene>
+        <!--Torque-->
+        <scene sceneID="q1Q-Ew-6uz">
+            <objects>
+                <viewController id="uWe-hg-nRJ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="71Z-FW-nik"/>
+                        <viewControllerLayoutGuide type="bottom" id="mvg-Dj-m50"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NEk-E2-w6O">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Torque" id="dM4-vN-BF6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NaR-FX-MjQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1078" y="1935"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AsZ-ah-zQT">
